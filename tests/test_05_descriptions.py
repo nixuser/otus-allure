@@ -28,6 +28,8 @@ def test_html_description():
 @allure.description("""
 Multiline test description.
 That comes from the allure.description decorator.
+
+Nothing special about it.
 """)
 def test_description_from_decorator():
     assert 42 == int(6 * 7)
