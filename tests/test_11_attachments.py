@@ -5,8 +5,8 @@ import pytest
 @pytest.fixture
 def attach_file(request):
     allure.attach(
-        body='A text attacment init',
-        name='init attah',
+        body='A text attachment init',
+        name='init attach',
         attachment_type=allure.attachment_type.TEXT
     )
 
@@ -19,7 +19,7 @@ def attach_file(request):
     request.addfinalizer(fin)
 
 
-def test_with_attacments_in_fixture(attach_file):
+def test_with_attachments_in_fixture(attach_file):
     pass
 
 
