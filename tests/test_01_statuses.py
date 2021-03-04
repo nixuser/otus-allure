@@ -20,4 +20,9 @@ def test_skip():
 
 
 def test_broken():
-    raise Exception('oops')
+    raise Exception('bye-bye')
+
+
+def test_outdated():
+    with open('not_found') as f:
+        f.readline()

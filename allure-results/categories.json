@@ -11,7 +11,7 @@
   {
     "name": "Outdated tests",
     "matchedStatuses": ["broken"],
-    "traceRegex": ".*FileNotFoundException.*"
+    "traceRegex": ".*FileNotFoundError.*"
   },
   {
     "name": "Product defects",
