@@ -11,15 +11,18 @@ def test_success():
 
 def test_failure():
     """this test fails"""
+    time.sleep(1)
     assert False
 
 
 def test_skip():
+    time.sleep(2)
     """this test is skipped"""
     pytest.skip('for a reason!')
 
 
 def test_broken():
+    time.sleep(3)
     raise Exception('bye-bye')
 
 
