@@ -1,7 +1,5 @@
 import allure
 
-TEST_CASE_LINK = 'https://github.com/qameta/allure-integrations/issues/8#issuecomment-268313637'
-
 
 @allure.link('https://www.youtube.com/watch?v=7KgihdKTWY4')
 def test_with_link():
@@ -18,6 +16,6 @@ def test_with_issue_link():
     pass
 
 
-@allure.testcase(TEST_CASE_LINK, 'Test case title')
+@allure.testcase('150', 'Test case title')
 def test_with_testcase_link():
     pass
