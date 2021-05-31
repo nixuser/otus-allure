@@ -8,7 +8,7 @@ def passing_step():
     pass
 
 
-@allure.step("")
+@allure.step("Root step")
 def step_with_nested_steps():
     nested_step()
 
