@@ -13,7 +13,7 @@ def fixture_conftest_step():
     conftest_step()
 
 
-@pytest.fixture(scope="session")
+@pytest.fixture(scope="session", autouse=True)
 def get_environment(pytestconfig):
     props = {
         'Shell': os.getenv('SHELL'),
