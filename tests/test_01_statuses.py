@@ -29,3 +29,10 @@ def test_broken():
 def test_outdated():
     with open('not_found') as f:
         f.readline()
+
+
+@pytest.mark.flaky(reruns=2)
+def test_flaky():
+    """this test is flaky"""
+    import random
+    assert random.choice([True, False])
