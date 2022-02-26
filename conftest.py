@@ -16,12 +16,13 @@ def fixture_conftest_step():
 @pytest.fixture(scope="session", autouse=True)
 def get_environment(pytestconfig):
     props = {
-        'Shell': os.getenv('SHELL'),
-        'Terminal': os.getenv('TERM'),
-        'Stand': 'Production'
+        'Browser': 'Chrome',
+        'Browser.Version': '98.0',
+        'Stand': 'Production',
+        'Shell': os.getenv('SHELL')
     }
 
     tests_root = pytestconfig.rootdir
     with open(f'{tests_root}/allure-results/environment.properties', 'w') as f:
-        for k, v in props.items():
-            f.write(f'{k}={v}\n')
+        env_props = '\n'.join([f'{k}={v}' for k, v in props.items()])
+        f.write(env_props)
