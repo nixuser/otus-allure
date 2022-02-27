@@ -1,16 +1,22 @@
 import allure
-import pytest
 
 
+@allure.epic("2021Q3")
 @allure.feature("Authorization")
 @allure.story("Valid credentials")
-@pytest.mark.parametrize("x", [True, 1])
-def test_auth_valid(x):
-    assert x
+def test_auth_valid():
+    pass
 
 
+@allure.epic("2021Q3")
 @allure.feature("Authorization")
 @allure.story("Invalid credentials")
-@pytest.mark.parametrize("x", [True, 0])
-def test_auth_non_valid(x):
-    assert x
+def test_auth_non_valid():
+    pass
+
+
+@allure.epic("2021Q4")
+@allure.feature("Export")
+@allure.story("CSV")
+def test_csv_export():
+    pass
