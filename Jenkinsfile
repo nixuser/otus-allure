@@ -8,7 +8,7 @@ pipeline {
          }
     stage('test') {
       steps {
-        sh 'venv/bin/python -m pytest --junitxml=./test-reports/report.xml ./tests'
+        sh '/home/venv/bin/python -m pytest --junitxml=./test-reports/report.xml ./tests'
       }
       post {
         always {
