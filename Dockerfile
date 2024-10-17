@@ -7,7 +7,7 @@ COPY pytest.ini /home
 COPY requirements.txt /home
 
 RUN apt-get update
-RUN apt-get install -y default-jre wget vim jq python3-venv
+RUN apt-get install -y default-jre wget vim jq python3-venv git
 
 ARG ALLURE_VER=2.13.7
 
